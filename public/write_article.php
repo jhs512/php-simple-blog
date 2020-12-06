@@ -3,6 +3,18 @@ $pageTitle = '<i class="fa fa-pen"></i> <span>WRITE</span>';
 ?>
 <?php include_once 'header.php'; ?>
 
+<?php
+if ( App__actorIsLogined() == false ) {
+  ?>
+  <script>
+  alert('권한이 없습니다.');
+  history.back();
+  </script>
+  <?php
+  exit;
+}
+?>
+
 <section class="section section-article-write con-min-width">
   <div class="con">
     <form method="POST" action="do_write_article.php">

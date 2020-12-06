@@ -1,5 +1,5 @@
 <?php
-include_once 'db.php';
+include_once '../start.php';
 ?>
 <!doctype html>
 <html lang="ko">
@@ -36,6 +36,7 @@ include_once 'db.php';
               <span>LIST</span>
             </a>
           </li>
+          <?php if ( App__actorIsLogined() ) { ?>
           <li>
             <a href="/write_article.php" class="flex flex-ai-c height-100p hover-underline">
               <i class="fas fa-pen"></i>
@@ -43,6 +44,25 @@ include_once 'db.php';
               <span>WRITE</span>
             </a>
           </li>
+          <?php } ?>
+          <?php if ( !App__actorIsLogined() ) { ?>
+          <li>
+            <a href="/login.php" class="flex flex-ai-c height-100p hover-underline">
+              <i class="fas fa-sign-in-alt"></i>
+              &nbsp;
+              <span>LOGIN</span>
+            </a>
+          </li>
+          <?php } ?>
+          <?php if ( App__actorIsLogined() ) { ?>
+          <li>
+            <a href="/do_logout.php" class="flex flex-ai-c height-100p hover-underline">
+              <i class="fas fa-sign-out-alt"></i>
+              &nbsp;
+              <span>LOGOUT</span>
+            </a>
+          </li>
+          <?php } ?>
         </ul>
       </nav>
     </div>

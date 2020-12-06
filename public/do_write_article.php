@@ -1,5 +1,5 @@
 <?php
-include_once 'db.php';
+include_once '../start.php';
 ?>
 <?php
 $_REQUEST['title'] = mysqli_real_escape_string($dbLink, $_REQUEST['title']);

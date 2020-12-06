@@ -13,6 +13,16 @@ WHERE id = '{$_REQUEST['id']}'
 ";
 $rs = mysqli_query($dbLink, $sql);
 $article = mysqli_fetch_assoc($rs);
+
+if ( App__actorCanModify($article) == false ) {
+  ?>
+  <script>
+  alert('권한이 없습니다.');
+  history.back();
+  </script>
+  <?php
+  exit;
+}
 ?>
 
 <section class="section section-article-modify con-min-width">
