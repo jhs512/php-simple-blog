@@ -1,0 +1,133 @@
+/* 폰트 적용 시작 */
+@font-face {
+  font-family: "LotteMartDream";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2")
+      format("woff2"),
+    url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff")
+      format("woff");
+}
+@font-face {
+  font-family: "LotteMartDream";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2")
+      format("woff2"),
+    url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff")
+      format("woff");
+}
+@font-face {
+  font-family: "LotteMartDream";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2")
+      format("woff2"),
+    url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff")
+      format("woff");
+}
+
+html {
+  font-family: "LotteMartDream", sans-serif;
+}
+/* 폰트 적용 끝 */
+
+/* 노말라이즈 시작 */
+body, ul, li {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+button, input[type="submit"] {
+  background-color:transparent;
+  border:0;
+  outline:0;
+  padding:0;
+  list-style:none;
+  display:inline;
+  cursor:pointer;
+  font-family:inherit;
+  font-size:inherit;
+}
+/* 노말라이즈 끝 */
+
+
+/* 라이브러리 시작 */
+.underline {
+  text-decoration:underline;
+}
+
+.underline:hover {
+  color:red;
+}
+
+.hover-underline:hover {
+  text-decoration:underline;
+  color:red;
+}
+
+.con {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.flex {
+  display:flex;
+}
+
+.flex-grow-1 {
+  flex-grow:1;
+}
+
+.flex-ai-c {
+  align-items:center;
+}
+
+.height-100p {
+  height:100%;
+}
+/* 라이브러리 끝 */
+
+/* 커스텀 시작 */
+:root {
+  --site-width:1200px;
+  --body-padding:10px;
+}
+
+.con-min-width {
+  min-width:var(--site-width);
+  padding-left:var(--body-padding);
+  padding-right:var(--body-padding);
+}
+
+.con {
+  width:var(--site-width);
+}
+
+body {
+}
+
+.top-bar {
+  background-color:black;
+  color:white;
+  height:100px;
+}
+
+.top-bar__logo {
+  font-size:2rem;
+}
+
+.top-bar__menu {
+  margin-left:calc(var(--body-padding) * -1);
+}
+
+.top-bar__menu > ul > li > a {
+  padding:0 10px;
+}
+/* 커스텀 끝 */
