@@ -28,9 +28,8 @@ $article = mysqli_fetch_assoc($rs);
       제목 : <?=$article['title']?>
     </div>
     <hr />
-    <div id="editor-viewer-1">
-      <?=$article['body']?>
-    </div>
+    <script type="text/x-template"><?=App__printBodyForToastEditor($article['body'])?></script>
+    <div id="editor-viewer-1"></div>
     <hr>
     <div>
       <a href="#" class="underline" onclick="history.back();">뒤로가기</a>

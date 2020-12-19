@@ -73,7 +73,8 @@ function submitModifyForm(form) {
       </div>
       <hr />
       <div>
-          <div id="editor-1"><?=$article['body']?></div>
+          <script type="text/x-template"><?=App__printBodyForToastEditor($article['body'])?></script>
+          <div id="editor-1"></div>
       </div>
       <hr />
       <div>

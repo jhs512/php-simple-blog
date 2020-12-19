@@ -14,3 +14,7 @@ function App__actorCanModify($article) {
 function App__actorCanDelete($article) {
   return App__actorIsLogined();
 }
+
+function App__printBodyForToastEditor($body) {
+  return str_ireplace("script", "<!--REPLACE:script-->", $body);
+}

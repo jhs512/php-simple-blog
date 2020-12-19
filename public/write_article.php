@@ -61,6 +61,7 @@ function submitWriteForm(form) {
       </div>
       <hr />
       <div>
+          <script type="text/x-template"></script>
           <div id="editor-1"></div>
       </div>
       <hr />

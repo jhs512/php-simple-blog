@@ -22,7 +22,8 @@ function Editor1__init() {
     return;
   }
 
-  var initialValue = el.innerHTML.trim();
+  var initialValue = $(el).prev().html().trim().replace(/<!--REPLACE:script-->/gi, 'script');
+
   var editor = new toastui.Editor({
     el: el,
     previewStyle: 'vertical',
@@ -46,7 +47,8 @@ function EditorViewer1__init() {
     return;
   }
 
-  var initialValue = el.innerHTML.trim();
+  var initialValue = $(el).prev().html().trim().replace(/<!--REPLACE:script-->/gi, 'script');
+
   var viewer = new toastui.Editor.factory({
     el: el,
     initialValue: initialValue,
