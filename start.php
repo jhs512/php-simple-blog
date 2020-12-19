@@ -2,7 +2,7 @@
 session_start();
 
 if ( PHP_OS == 'WINNT' ) {
-  $dbLink = mysqli_connect("127.0.0.1", "sbsst", "sbs123414", "site1");
+  $dbLink = mysqli_connect("127.0.0.1", "sbsst", "sbs123414", "site1_devel");
 }
 else {
   $dbLink = mysqli_connect("127.0.0.1", "site1", "sbs123414", "site1");
