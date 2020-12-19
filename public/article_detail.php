@@ -13,7 +13,7 @@ WHERE id = '{$_REQUEST['id']}'
 $rs = mysqli_query($dbLink, $sql);
 $article = mysqli_fetch_assoc($rs);
 ?>
-
+<?php include_once 'toast_ui.php'; ?>
 <section class="section section-article-detail con-min-width">
   <div class="con">
     <div>
@@ -28,8 +28,8 @@ $article = mysqli_fetch_assoc($rs);
       제목 : <?=$article['title']?>
     </div>
     <hr />
-    <div>
-      <?=nl2br($article['body'])?>
+    <div id="editor-viewer-1">
+      <?=$article['body']?>
     </div>
     <hr>
     <div>

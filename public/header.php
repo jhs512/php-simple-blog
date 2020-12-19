@@ -5,10 +5,10 @@ include_once '../start.php';
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>홍길동 블로그 - <?=$pageTitle?></title>
+	<title>홍길동 블로그 - <?=strip_tags($pageTitle)?></title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link rel="stylesheet" href="/reousrce/app.css">
+  <link rel="stylesheet" href="/resource/app.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
